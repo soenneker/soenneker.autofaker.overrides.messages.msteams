@@ -8,7 +8,7 @@ namespace Soenneker.AutoFaker.Overrides.Messages.MsTeams;
 /// <summary>
 /// An AutoFaker (AutoBogus) override for the MsTeams Message
 /// </summary>
-public class MsTeamsMessageOverrideOverride : AutoFakerOverride<MsTeamsMessage>
+public class MsTeamsMessageOverride : AutoFakerOverride<MsTeamsMessage>
 {
     public override void Generate(AutoFakerOverrideContext context)
     {
