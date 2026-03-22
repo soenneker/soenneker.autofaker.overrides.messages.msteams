@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.AutoFaker.Overrides.Messages.MsTeams.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.AutoFaker.Overrides.Messages.MsTeams\Soenneker.AutoFaker.Overrides.Messages.MsTeams.csproj" />
     </ItemGroup>
 
     <ItemGroup>
