@@ -41,7 +41,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Messages.MsTeams" Version="4.0.332" />
+        <PackageReference Include="Soenneker.Messages.MsTeams" Version="4.0.333" />
         <PackageReference Include="Soenneker.Utils.AutoBogus" Version="4.0.912" />
     </ItemGroup>
 </Project>
