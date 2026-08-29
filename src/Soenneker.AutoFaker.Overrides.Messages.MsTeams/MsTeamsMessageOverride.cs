@@ -1,7 +1,6 @@
 ﻿using Soenneker.Messages.MsTeams;
 using Soenneker.Utils.AutoBogus.Context;
 using Soenneker.Utils.AutoBogus.Override;
-using Soenneker.Utils.Environment;
 
 namespace Soenneker.AutoFaker.Overrides.Messages.MsTeams;
 
@@ -20,6 +19,6 @@ public class MsTeamsMessageOverride : AutoFakerOverride<MsTeamsMessage>
 
         target.Channel = "notifications";
         target.Queue = "msteams";
-        target.Sender = EnvironmentUtil.GetMachineName();
+        target.Sender = context.Faker.Internet.DomainWord();
     }
 }

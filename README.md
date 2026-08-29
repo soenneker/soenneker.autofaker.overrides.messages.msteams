@@ -5,14 +5,25 @@
 
 # Soenneker.AutoFaker.Overrides.Messages.MsTeams
 
-An AutoFaker (AutoBogus) override for the MsTeams Message.
+An AutoFaker override for the routing metadata on `MsTeamsMessage`.
 
-## Install
+## Installation
 
 ```bash
 dotnet add package Soenneker.AutoFaker.Overrides.Messages.MsTeams
 ```
 
-## What you get
+## Usage
 
-- `MsTeamsMessageOverride` — An AutoFaker (AutoBogus) override for the MsTeams Message.
+```csharp
+using Soenneker.AutoFaker.Overrides.Messages.MsTeams;
+using Soenneker.Messages.MsTeams;
+using Soenneker.Utils.AutoBogus;
+
+var autoFaker = new AutoFaker();
+autoFaker.Config.Overrides = [new MsTeamsMessageOverride()];
+
+MsTeamsMessage message = autoFaker.Generate<MsTeamsMessage>();
+```
+
+The override sets `Channel` to `notifications`, `Queue` to `msteams`, and `Sender` to the current machine name. Other message properties are left to AutoFaker. The fixed channel and queue values make this override opinionated; add a later override when a test needs different routing.
